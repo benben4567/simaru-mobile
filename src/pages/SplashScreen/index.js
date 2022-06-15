@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Text, View, ToastAndroid} from 'react-native';
+import {StyleSheet, Text, View, ToastAndroid, Image} from 'react-native';
 import {Logo} from '../../assets';
 import {Gap} from '../../components';
 import {useDispatch} from 'react-redux'
@@ -39,12 +39,12 @@ const SplashScreen = ({navigation}) => {
   }
   
   useEffect(() => {
-    authCheck()
+    // authCheck()
   }, []);
 
   return (
     <View style={styles.container}>
-      <Logo style={styles.logo} />
+      <Image source={Logo} style={styles.logo} />
       <Gap height={20} />
       <Text style={styles.title}>SIMARU</Text>
     </View>
