@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TextInput, ToastAndroid, Keyboard} from 'react-native';
+import {StyleSheet, Text, View, TextInput, ToastAndroid, Keyboard, Image} from 'react-native';
 import {Logo} from '../../assets';
 import {Gap, Button} from '../../components';
 import {useDispatch, useSelector} from 'react-redux'
@@ -85,7 +85,7 @@ const Login = ({navigation}) => {
   return (
     <View style={styles.page}>
       <View style={{alignItems: 'center'}}>
-        <Logo width={64} height={64} />
+        <Image source={Logo} style={styles.logo} />
         <Gap height={3} />
         <Text style={styles.title}>SIMARU</Text>
       </View>
@@ -146,4 +146,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     backgroundColor: 'white',
   },
+  logo: {
+    width: 64,
+    height: 64,
+  }
 });

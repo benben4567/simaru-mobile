@@ -39,7 +39,7 @@ const SplashScreen = ({navigation}) => {
   }
   
   useEffect(() => {
-    // authCheck()
+    authCheck()
   }, []);
 
   return (
